@@ -2,27 +2,44 @@
 <html>
 <head>
 	<title>Mobil TV</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-	<div id="" data-role="page" >
-		<div data-role="header">
-			<h1>Mobil TV</h1>
+
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<div  data-role="page" data-theme="a" id="one">
+		<div data-role="header" role="banner" class="ui-header">
+			<h1 role="heading" >Mobil TV</h1>
 		</div>
 
-		<div role="main" data-role="ui-content">
+		<div role="main" data-role="content"  class="ui-content">
+			<h2>Probando</h2>
 			<p>I'm first in the source order so I'm shown as the page.</p>
-			<p>View internal page called <a href="#bar">bar</a></p>
+			<p>View internal page called <a href="#bar"  data-transition="pop">bar</a></p>
 		</div>
 
-		<div data-role="footer">(c)copyright Lambda Studios 2018</div>
+		<div data-role="footer" class="ui-footer ui-bar-a">(c)copyright Lambda Studios 2018</div>
 	</div>
+
+	<div  data-role="page"  id="bar">
+			<div data-role="header">
+				<h1>12 TV</h1>
+			</div>
+
+			<div role="main" data-role="content">
+				<p>I'm first in the source order so I'm shown as the page.</p>
+				<p>View internal page called <a href="#one"  data-transition="flip">bar</a></p>
+			</div>
+
+			<div data-role="footer">(c)copyright Lambda Studios 2018</div>
+	</div>
+
 </body>
 </html>
